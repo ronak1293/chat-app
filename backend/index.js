@@ -39,12 +39,12 @@ app.use(notFound)
 app.use(errorHandler)
 
 const PORT=5000||process.env.PORT;
-const server=app.listen(PORT,console.log('server started'));
+const server=app.listen(PORT,console.log(`server started at ${PORT}`));
 
 const io=require("socket.io")(server,{
   pingTimeout:60000,
   cors:{
-    origin:`http://localhost:5173`,
+    origin:`http://localhost:5000`,
   }
 })
 
