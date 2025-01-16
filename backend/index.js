@@ -44,7 +44,7 @@ const server=app.listen(PORT,console.log('server started'));
 const io=require("socket.io")(server,{
   pingTimeout:60000,
   cors:{
-    origin:"https://chat-app-2-dpok.onrender.com",
+    origin:`http://localhost:5173`,
   }
 })
 
